@@ -10,6 +10,9 @@ func SetupRouter() *fiber.App {
 	app := fiber.New()
 
 	// Define routes
+	app.Get("/api/stories", func(c *fiber.Ctx) error {
+		return handlers.GetStories(c)
+	})
 
 	app.Get("/api/stories/:id/comments", func(c *fiber.Ctx) error {
 		return handlers.GetStoryComments(c)
