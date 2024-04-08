@@ -1,5 +1,6 @@
 module github.com/DevloperAmanSingh/go-news-api
 
+
 go 1.22.0
 
 require (
